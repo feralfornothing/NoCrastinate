@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tasksFragment">
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.nocrastinate.TasksFragment"
+        android:label="Zadania" />
+
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="com.example.nocrastinate.CompletedFragment"
+        android:label="Ukończone" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.nocrastinate.SettingsFragment"
+        android:label="Statystyki" />
+
+</navigation>
