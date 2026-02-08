@@ -10,55 +10,40 @@
 
 ## 3. Architektura aplikacji
 
-NoCrastinate/
-│
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/example/nocrastinate/
-│   │   │   │   ├── ui/
-│   │   │   │   │   ├── MainActivity.kt
-│   │   │   │   │   ├── TasksFragment.kt
-│   │   │   │   │   ├── CompletedFragment.kt
-│   │   │   │   │   └── SettingsFragment.kt
-│   │   │   │   │
-│   │   │   │   ├── adapters/
-│   │   │   │   │   └── TaskAdapter.kt
-│   │   │   │   │
-│   │   │   │   ├── models/
-│   │   │   │   │   └── Task.kt
-│   │   │   │   │
-│   │   │   │   ├── data/
-│   │   │   │   │   └── TaskManager.kt
-│   │   │   │   │
-│   │   │   │   ├── utils/
-│   │   │   │   │   ├── NotificationHelper.kt
-│   │   │   │   │   └── SwipeToDeleteHelper.kt
-│   │   │   │   │
-│   │   │   │   └── receivers/
-│   │   │   │       └── NotificationReceiver.kt
-│   │   │   │
-│   │   │   ├── res/
-│   │   │   │   ├── layout/
-│   │   │   │   ├── navigation/
-│   │   │   │   ├── menu/
-│   │   │   │   ├── values/
-│   │   │   │   ├── values-sw600dp/
-│   │   │   │   ├── values-sw720dp/
-│   │   │   │   ├── drawable/
-│   │   │   │   └── mipmap-*/
-│   │   │   │
-│   │   │   └── AndroidManifest.xml
-│   │   │
-│   │   └── test/
-│   │
-│   └── build.gradle.kts
-│
-├── gradle/
-├── .gitignore
-├── README.md
-└── build.gradle.kts
-```
+### Schemat struktury projektu
+
+**Struktura katalogów:**
+
+- **app/src/main/java/com/example/nocrastinate/**
+  - **ui/** - Fragmenty i Activities
+    - `MainActivity.kt`
+    - `TasksFragment.kt`
+    - `CompletedFragment.kt`
+    - `SettingsFragment.kt`
+  
+  - **adapters/** - Adaptery RecyclerView
+    - `TaskAdapter.kt`
+  
+  - **models/** - Modele danych
+    - `Task.kt`
+  
+  - **data/** - Warstwa dostępu do danych
+    - `TaskManager.kt`
+  
+  - **utils/** - Klasy pomocnicze
+    - `NotificationHelper.kt`
+    - `SwipeToDeleteHelper.kt`
+  
+  - **receivers/** - Broadcast Receivers
+    - `NotificationReceiver.kt`
+
+- **app/src/main/res/** - Zasoby
+  - `layout/` - Pliki XML layoutów
+  - `navigation/` - Graf nawigacji
+  - `menu/` - Menu bottom navigation
+  - `values/` - Kolory, wymiary, stringi
+  - `drawable/` - Grafiki i drawable
+  - `mipmap-*/` - Ikony aplikacji
 
 ## 4. Opis zaimplementowanych funkcjonalności
 - 1 - dodawanie zadań - implementacja z zastosowaniem `TasksFragment.kt` oraz `add.setOnClickListener`, zapisanie do `active_tasks.json`.
